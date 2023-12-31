@@ -1,6 +1,6 @@
-# gym-management-java-scenebuilder
+# gym-management-java-javafx-scenebuilder
 ## Description:
-GymApp est une application de gestion complète pour les salles de sport. Elle offre une plateforme centralisée pour la gestion des employés, des clients, de la planification des cours, ainsi que des équipements et des salles au sein d'une salle de sport. Développée en utilisant les technologies Java, JavaFX, SceneBuilder, WAMP, et MySQL, GymApp propose une solution robuste et conviviale pour les responsables de salles de sport.
+GymApp est une application de gestion complète pour les salles de sport. Elle offre une plateforme centralisée pour la gestion des employés, des clients, de la planification des cours, ainsi que des équipements et des salles au sein d'une salle de sport. Accès soit en tant qu'administrateur ou propriétaire. Développée en utilisant les technologies Java, JavaFX, SceneBuilder, WAMP, et MySQL, GymApp propose une solution robuste et conviviale pour les responsables de salles de sport.
 
 ## Base de Données
 La base de données comporte 10 tables principales :
@@ -52,9 +52,6 @@ Implémentation de tests unitaires pour garantir le bon fonctionnement de chaque
 ### Tests d'Intégration
 Tests d'intégration pour s'assurer que toutes les fonctionnalités fonctionnent correctement ensemble.
 
-## Sécurité
-Assurez-vous d'avoir mis en place des mécanismes d'authentification sécurisés et une gestion appropriée des autorisations.
-
 ## Setup
 1. Installer WAMP :
    Téléchargez et installez WAMP 3.3.0 à partir du site officiel. Assurez-vous de choisir la version appropriée pour votre système d'exploitation (WAMP 64 bits ou 32 bits).
@@ -74,4 +71,6 @@ Assurez-vous d'avoir mis en place des mécanismes d'authentification sécurisés
 6. Importer la base de données :
    Accédez à phpMyAdmin en entrant "localhost/phpmyadmin/" dans votre navigateur web. Connectez-vous en utilisant le nom d'utilisateur "root" (sans mot de passe). Ensuite, créez une nouvelle base de données nommée "gym_db". Une fois la base de données créée, rendez-vous dans l'onglet "Importation" et importez la dernière version du fichier de base de données "gym_db.sql" situé dans le dossier du projet.
 
-Si tout a été configuré correctement, démarrez le projet en eclipse en run main avec configurations, vous devriez maintenant avoir accès au login de "GymApp" et vous pouvez commencer à utiliser l'application ( vous pouvez entrer en tant qu'un administrateur ou propriétaire [super admin]). Si vous rencontrez des problèmes lors du processus de configuration, vérifiez à nouveau les étapes.
+Si tout a été configuré correctement, démarrez le projet en eclipse en run main avec configurations, vous devriez maintenant avoir accès au login de "GymApp" et vous pouvez commencer à utiliser l'application ( vous pouvez entrer en tant qu'un administrateur ou propriétaire [super admin]). Si vous rencontrez des problèmes lors du processus de configuration, vérifiez à nouveau les étapes et voir photos.rar.
+
+GymApp est faite par Outman OURICH, Ayoub AIT ABIDALLA et Akram ACHIBANE.
