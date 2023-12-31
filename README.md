@@ -52,9 +52,6 @@ Implémentation de tests unitaires pour garantir le bon fonctionnement de chaque
 ### Tests d'Intégration
 Tests d'intégration pour s'assurer que toutes les fonctionnalités fonctionnent correctement ensemble.
 
-## Sécurité
-Assurez-vous d'avoir mis en place des mécanismes d'authentification sécurisés et une gestion appropriée des autorisations.
-
 ## Setup
 1. Installer WAMP :
    Téléchargez et installez WAMP 3.3.0 à partir du site officiel. Assurez-vous de choisir la version appropriée pour votre système d'exploitation (WAMP 64 bits ou 32 bits).
