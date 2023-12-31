@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="bglogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClientController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="176.0" layoutY="81.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="400.0" prefWidth="232.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="569.0" prefWidth="274.0" style="-fx-border-color: #7B68EE; -fx-border-radius: 8px; -fx-border-width: 1px;">
+                           <children>
+                              <Label layoutX="9.0" layoutY="52.0" prefHeight="17.0" prefWidth="41.0" text="CIN">
+                                 <padding>
+                                    <Insets left="3.0" />
+                                 </padding></Label>
+                              <Label layoutX="2.0" layoutY="143.0" prefHeight="17.0" prefWidth="56.0" text="Prénom">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding></Label>
+                              <Label layoutX="4.0" layoutY="195.0" prefHeight="17.0" prefWidth="51.0" text="Adresse">
+                                 <padding>
+                                    <Insets left="4.0" />
+                                 </padding></Label>
+                              <Label layoutX="7.0" layoutY="242.0" prefHeight="17.0" prefWidth="63.0" text="Téléphone" />
+                              <TextField fx:id="clientCin" layoutX="85.0" layoutY="48.0" prefHeight="25.0" prefWidth="179.0" />
+                              <TextField fx:id="clientSName" layoutX="85.0" layoutY="139.0" prefHeight="25.0" prefWidth="175.0" />
+                              <TextField fx:id="ClientAdresse" layoutX="85.0" layoutY="191.0" prefHeight="25.0" prefWidth="173.0" />
+                              <TextField fx:id="ClientTel" layoutX="84.0" layoutY="238.0" prefHeight="25.0" prefWidth="175.0" />
+                              <Button fx:id="btnaddclient" layoutX="154.0" layoutY="500.0" mnemonicParsing="false" onAction="#AddClient" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 20;" text="Ajouter" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btndeletclient" layoutX="178.0" layoutY="340.0" mnemonicParsing="false" onAction="#DeleteCLient" prefHeight="25.0" prefWidth="81.0" style="-fx-background-radius: 20;" text="Delete" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btneditClient" layoutX="85.0" layoutY="340.0" mnemonicParsing="false" onAction="#EditClient" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 20;" text="Edit" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label id="error" fx:id="errorAddClient" layoutX="33.0" layoutY="534.0" prefHeight="17.0" prefWidth="216.0" stylesheets="@application.css" textFill="#ff0101" />
+                              <TextField fx:id="nameSearch" layoutX="9.0" layoutY="14.0" prefHeight="25.0" prefWidth="257.0" promptText="Saisir le Cin ...." style="-fx-border-radius: 10px;" />
+                              <ImageView fx:id="search" fitHeight="21.0" fitWidth="13.0" layoutX="247.0" layoutY="20.0" onMouseClicked="#searchClient" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@search.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="16.0" layoutY="460.0" text="Prix a payer :" />
+                              <TextField fx:id="price" layoutX="115.0" layoutY="456.0" prefHeight="25.0" prefWidth="125.0" />
+                              <Label layoutX="4.0" layoutY="401.0" prefHeight="17.0" prefWidth="77.0" text="Abonnement">
+                                 <padding>
+                                    <Insets left="3.0" />
+                                 </padding></Label>
+                              <ChoiceBox fx:id="typeAb" layoutX="87.0" layoutY="397.0" prefHeight="25.0" prefWidth="171.0" />
+                              <Label layoutX="9.0" layoutY="98.0" prefHeight="17.0" prefWidth="41.0" text="Nom" />
+                              <TextField fx:id="clientName" layoutX="86.0" layoutY="94.0" prefHeight="25.0" prefWidth="177.0" />
+                              <Label fx:id="clientIdEdit" layoutX="17.0" layoutY="344.0" prefHeight="17.0" prefWidth="15.0" />
+                              <ChoiceBox fx:id="gender" layoutX="86.0" layoutY="281.0" prefHeight="25.0" prefWidth="171.0" />
+                              <Label layoutX="5.0" layoutY="285.0" text="Sexe">
+                                 <padding>
+                                    <Insets left="3.0" />
+                                 </padding></Label>
+                              <Button fx:id="btnreset" layoutX="70.0" layoutY="500.0" mnemonicParsing="false" onAction="#Resetc" prefHeight="25.0" prefWidth="68.0" style="-fx-background-radius: 20;" text="Reset" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="600.0" prefWidth="722.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="5.0" layoutY="15.0" prefHeight="568.0" prefWidth="675.0" style="-fx-border-color: #7B68EE; -fx-border-radius: 8px; -fx-border-width: 1px;">
+                           <children>
+                              <TableView fx:id="tableClient" layoutX="39.0" layoutY="44.0" onMouseClicked="#handleMouseAction" prefHeight="475.0" prefWidth="589.0" stylesheets="@application.css">
+                                <columns>
+                                  <TableColumn fx:id="idclient" maxWidth="40.0" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="cinclientcolonne" maxWidth="75.33334350585938" prefWidth="75.33334350585938" text="CIN" />
+                                  <TableColumn fx:id="nomclientcolonne" prefWidth="96.6666259765625" text="Nom" />
+                                    <TableColumn fx:id="prenomclientcolonne" prefWidth="84.66668701171875" text="Prénom" />
+                                    <TableColumn fx:id="adresseclientcolonne" prefWidth="110.66668701171875" text="Adresse" />
+                                    <TableColumn fx:id="telclientcolonne" prefWidth="94.66664632161456" text="Tel" />
+                                    <TableColumn fx:id="sexClient" prefWidth="94.66664632161456" text="Sexe" />
+                                </columns>
+                              </TableView>
+                              
+                           </children>
+                        </AnchorPane>
+                        <Button layoutX="693.0" layoutY="15.0" mnemonicParsing="false" onAction="#goBack" prefHeight="15.0" prefWidth="21.0" text="&lt;" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

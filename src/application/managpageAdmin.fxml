@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <AnchorPane id="bglogin" layoutX="-30.0" layoutY="-1.0" prefHeight="600.0" prefWidth="1030.0" stylesheets="@application.css">
+         <children>
+            <Button fx:id="gotoPaiementAdmin" alignment="BASELINE_LEFT" layoutX="575.0" layoutY="198.0" mnemonicParsing="false" onAction="#goToPaiementAdmin" prefHeight="144.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text="Paiement" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="equipementBtnAdmin" alignment="BASELINE_LEFT" layoutX="798.0" layoutY="198.0" mnemonicParsing="false" onAction="#gotoEquipementAdmin" prefHeight="144.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text="Equipement" textFill="WHITE">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="gocoachAdmin" alignment="BASELINE_LEFT" layoutX="369.0" layoutY="198.0" mnemonicParsing="false" onAction="#goCoachAdmin" prefHeight="144.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text="Coach" textFill="WHITE">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClientAdmin" alignment="BASELINE_LEFT" layoutX="157.0" layoutY="198.0" mnemonicParsing="false" onAction="#goToClientAdmin" prefHeight="144.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text=" Client" textFill="WHITE">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <Pane layoutX="938.0" layoutY="31.0" onMouseClicked="#backlogin" prefHeight="43.0" prefWidth="44.0" style="-fx-background-color: #3585F9; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="27.0" layoutX="9.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logout.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+   </children>
+</AnchorPane>

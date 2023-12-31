@@ -1,0 +1,102 @@
+.button{
+	-fx-background-color :#3585F9;
+	
+}
+.button:hover{
+	-fx-background-color :  white;
+	
+	-fx-text-fill:#3585F9 ;
+	-fx-border-color : #3585F9;
+	-fx-border-radius : 20px;
+}
+
+
+
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view .column-header-background{
+    -fx-background-color:#3585F9;
+ 
+    
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #a8c0ff;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #a8c0ff;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+#bglogin{
+	-fx-background-color: white;
+}
+#bgl{
+/*-fx-background-color:linear-gradient(to right, #000046, #3585F9);	*/
+ -fx-background-color: linear-gradient(to top, #3535D9, #3585F9);
+}
+.default-color0.chart-pie{
+	-fx-pie-color: #00308F;
+}
+.chart-pie-label { /*this is what you need for labels*/
+    -fx-fill: white;
+    
+} 
+.default-color1.chart-pie{
+	-fx-pie-color: #007FFF;
+}
+.default-color2.chart-pie{
+	-fx-pie-color: #6CB4EE;
+}
+.chart-title {
+  -fx-text-fill: Black;
+  -fx-font-size: 13px;
+}
+ .label {
+    -fx-text-fill: black;
+}
+.check-box{
+	-fx-text-fill: black;
+}
+#btnp{
+	-fx-background-color:linear-gradient(to right, #3535D9, #3585F9);
+}
+#pai{
+	-fx-background-color:linear-gradient(to right, #3535D9, #3585F9);
+}
+#error{
+	-fx-text-fill: red;
+}
+#info{
+	-fx-text-fill: white;
+}

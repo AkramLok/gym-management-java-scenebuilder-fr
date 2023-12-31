@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="bglogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.equipementController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="176.0" layoutY="81.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="400.0" prefWidth="232.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="13.0" layoutY="16.0" prefHeight="565.0" prefWidth="282.0" style="-fx-border-color: #7B68EE; -fx-border-radius: 8px; -fx-border-width: 1px;">
+                           <children>
+                              <Label layoutX="10.0" layoutY="21.0" prefHeight="17.0" prefWidth="41.0" text="Libelle" textFill="WHITE" />
+                              <Label layoutX="10.0" layoutY="94.0" prefHeight="17.0" prefWidth="56.0" text="nombre" textFill="WHITE" />
+                              <Label layoutX="12.0" layoutY="165.0" prefHeight="17.0" prefWidth="51.0" text="état" textFill="#f6f5f5" />
+                              <TextField fx:id="libelleequipement" layoutX="82.0" layoutY="15.0" prefHeight="25.0" prefWidth="175.0" />
+                              <TextField fx:id="Nbrequipement" layoutX="82.0" layoutY="90.0" prefHeight="25.0" prefWidth="175.0" />
+                              <Button fx:id="btnaddequip" layoutX="23.0" layoutY="241.0" mnemonicParsing="false" onAction="#Addequipement" style="-fx-background-radius: 20;" text="Ajouter" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btndeleteequip" layoutX="106.0" layoutY="241.0" mnemonicParsing="false" onAction="#deleteEquip" style="-fx-background-radius: 20;" text="supprimer" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnReclamer" layoutX="191.0" layoutY="241.0" mnemonicParsing="false" onAction="#reclamerEquip" style="-fx-background-radius: 20;" text="Reclamer" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <ChoiceBox fx:id="Statusequipement" layoutX="82.0" layoutY="161.0" prefHeight="25.0" prefWidth="175.0" />
+                              <Label id="error" fx:id="errorAdde" layoutX="39.0" layoutY="367.0" prefHeight="17.0" prefWidth="199.0" stylesheets="@application.css" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="6.0" layoutY="15.0" prefHeight="565.0" prefWidth="647.0" style="-fx-border-color: #7B68EE; -fx-border-radius: 8px; -fx-border-width: 1px;">
+                           <children>
+                              <TableView fx:id="tableEquipement" layoutX="107.0" layoutY="57.0" onMouseClicked="#handleMouseAction" prefHeight="408.0" prefWidth="433.0" stylesheets="@application.css">
+                                 <columns>
+                                    <TableColumn fx:id="code_equip" maxWidth="74.00003051757812" prefWidth="68.00000762939453" text="code" />
+                                    <TableColumn fx:id="libelle_equip" prefWidth="193.3333282470703" text="Libelle" />
+                                    <TableColumn fx:id="nombre_equip" prefWidth="64.66668701171875" text="nombre" />
+                                    <TableColumn fx:id="status_equip" prefWidth="106.66665649414062" text="état" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="gobackbtn" layoutX="659.0" layoutY="15.0" mnemonicParsing="false" onAction="#goBack" prefHeight="15.0" prefWidth="21.0" text="&lt;" textFill="#fbf6f6">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

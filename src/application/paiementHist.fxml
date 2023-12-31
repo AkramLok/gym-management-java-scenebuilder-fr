@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="bglogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaiementController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="176.0" layoutY="81.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="400.0" prefWidth="232.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox id="pai" prefHeight="600.0" prefWidth="217.0" stylesheets="@application.css">
+                           <children>
+                              <Button id="btnp" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="108.0" prefWidth="217.0" stylesheets="@application.css" text="Paiement Historique" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button id="btnp" fx:id="addpaiement" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#goToAddpaiement" prefHeight="90.0" prefWidth="217.0" stylesheets="@application.css" text="Ajouter paiement" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button id="btnp" fx:id="actuelPaiement" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#gotoPaiement" prefHeight="90.0" prefWidth="217.0" stylesheets="@application.css" text="Paiement en cours" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button id="btnp" fx:id="historicPaiement" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#gotoHistPaiement" prefHeight="90.0" prefWidth="217.0" stylesheets="@application.css" text="Historique paiements" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="725.0" layoutY="18.0" mnemonicParsing="false" onAction="#goBack" prefHeight="15.0" prefWidth="21.0" text="&lt;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane layoutX="130.0" layoutY="52.0" prefHeight="473.0" prefWidth="528.0" style="-fx-border-color: #7B68EE; -fx-border-radius: 8px; -fx-border-width: 1px;">
+                           <children>
+                              <Button fx:id="showpaiementdata" layoutX="229.0" layoutY="426.0" mnemonicParsing="false" onAction="#PaiementHistShowData" text="showData" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TableView fx:id="tablePaiment" layoutX="23.0" layoutY="26.0" onMouseClicked="#handleMouseAction" prefHeight="384.0" prefWidth="481.0" stylesheets="@application.css">
+                                 <columns>
+                                    <TableColumn fx:id="idpaiementcolonne" maxWidth="40.0" prefWidth="75.0" text="id" />
+                                    <TableColumn fx:id="idclientcolonne" prefWidth="76.0" text="Id client" />
+                                    <TableColumn fx:id="TypeAbcolonne" prefWidth="97.0" text="Type Ab" />
+                                    <TableColumn fx:id="dateabcolonne" prefWidth="102.0" text="Date Ab" />
+                                    <TableColumn fx:id="datefinabcolonne" prefWidth="74.0" text="Date_Fin_Ab" />
+                                    <TableColumn fx:id="statutPaiement" prefWidth="90.66664632161456" text="Statut" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

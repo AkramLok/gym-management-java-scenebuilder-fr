@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #E6E6FA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaiementController2">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="176.0" layoutY="81.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="400.0" prefWidth="232.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox id="pai" prefHeight="600.0" prefWidth="232.0" stylesheets="@application.css">
+                           <children>
+                              <Button id="btnp" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="113.0" prefWidth="232.0" stylesheets="@application.css" text="Ajouter abonnement" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button id="btnp" fx:id="addpaiement" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#goToAddpaiement" prefHeight="90.0" prefWidth="232.0" stylesheets="@application.css" text="Ajouter paiement" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button id="btnp" fx:id="actuelPaiement" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#gotoPaiement" prefHeight="90.0" prefWidth="231.0" stylesheets="@application.css" text="Paiement en cours" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button id="btnp" fx:id="historicPaiement" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#gotoHistPaiement" prefHeight="90.0" prefWidth="231.0" stylesheets="@application.css" text="Historique paiements" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane id="bglogin" prefHeight="200.0" prefWidth="200.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="720.0" layoutY="21.0" mnemonicParsing="false" onAction="#goBack" prefHeight="15.0" prefWidth="21.0" text="&lt;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="9.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane layoutX="142.0" layoutY="49.0" prefHeight="460.0" prefWidth="531.0" style="-fx-border-color: #7B68EE; -fx-border-radius: 8px; -fx-border-width: 1px;">
+                           <children>
+                              <Label layoutX="30.0" layoutY="50.0" prefHeight="17.0" prefWidth="41.0" text="CIN" textFill="WHITE" />
+                              <Label fx:id="statutLabel" layoutX="211.0" layoutY="233.0" prefHeight="17.0" prefWidth="117.0" text="------------" textFill="WHITE" />
+                              <Button fx:id="btnPayer" layoutX="285.0" layoutY="295.0" mnemonicParsing="false" onAction="#payer" prefHeight="25.0" prefWidth="87.0" style="-fx-background-radius: 20;" text="Payer" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label fx:id="errorAddClient" layoutX="17.0" layoutY="299.0" prefHeight="17.0" prefWidth="179.0" textFill="RED" />
+                              <Label layoutX="31.0" layoutY="299.0" text="Prix a payer :" textFill="WHITE" />
+                              <TextField fx:id="price" layoutX="122.0" layoutY="295.0" prefHeight="25.0" prefWidth="145.0" />
+                              <Label layoutX="22.0" layoutY="120.0" prefHeight="17.0" prefWidth="70.0" text="Abonnement" textFill="WHITE" />
+                              <ChoiceBox fx:id="typeAb" layoutX="122.0" layoutY="116.0" prefHeight="25.0" prefWidth="250.0" />
+                              <Label layoutX="107.0" layoutY="233.0" prefHeight="17.0" prefWidth="56.0" text="Statut" textFill="WHITE" />
+                              <Label fx:id="statutpass" layoutX="92.0" layoutY="189.0" prefHeight="17.0" prefWidth="113.0" textFill="RED" />
+                              <ChoiceBox fx:id="cinSelect" layoutX="122.0" layoutY="46.0" prefHeight="25.0" prefWidth="250.0" />
+                              <Label fx:id="idClient" layoutX="432.0" layoutY="50.0" text="Id" textFill="WHITE" />
+                              <Label fx:id="datefinabLabel" layoutX="407.0" layoutY="120.0" text="datefinab" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

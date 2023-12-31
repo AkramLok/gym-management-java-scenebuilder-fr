@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="bglogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <Button alignment="BASELINE_LEFT" layoutX="698.0" layoutY="314.0" mnemonicParsing="false" onAction="#goToBilan" prefHeight="124.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text="Bilan" textFill="WHITE">
+         <padding>
+            <Insets left="45.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button alignment="BASELINE_LEFT" layoutX="391.0" layoutY="319.0" mnemonicParsing="false" onAction="#gotoAdmin" prefHeight="124.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text="Admin" textFill="WHITE">
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="gotoPaiement" alignment="BASELINE_LEFT" layoutX="117.0" layoutY="319.0" mnemonicParsing="false" onAction="#goToPaiement" prefHeight="124.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text="Paiement" textFill="WHITE">
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="equipementBtn" alignment="BASELINE_LEFT" layoutX="690.0" layoutY="105.0" mnemonicParsing="false" onAction="#gotoEquipement" prefHeight="124.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text="Equipement" textFill="WHITE">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="gocoach" alignment="BASELINE_LEFT" layoutX="400.0" layoutY="105.0" mnemonicParsing="false" onAction="#goCoach" prefHeight="124.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text="Coach" textFill="WHITE">
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClient" alignment="BASELINE_LEFT" layoutX="117.0" layoutY="105.0" mnemonicParsing="false" onAction="#goToClient" prefHeight="124.0" prefWidth="145.0" style="-fx-background-radius: 20;" stylesheets="@application.css" text="Client" textFill="WHITE">
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Pane layoutX="928.0" layoutY="21.0" onMouseClicked="#backlogin" prefHeight="43.0" prefWidth="44.0" style="-fx-background-color: #3585F9; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="27.0" layoutX="9.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logout.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+   </children>
+</AnchorPane>

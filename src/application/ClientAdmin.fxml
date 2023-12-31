@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="bglogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClientControllerAdmin">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="176.0" layoutY="81.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="400.0" prefWidth="232.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="564.0" prefWidth="274.0" style="-fx-border-color: #7B68EE; -fx-border-radius: 8px; -fx-border-width: 1px;">
+                           <children>
+                              <Label layoutX="9.0" layoutY="52.0" prefHeight="17.0" prefWidth="41.0" text="CIN" />
+                              <Label layoutX="10.0" layoutY="143.0" prefHeight="17.0" prefWidth="56.0" text="Prénom" />
+                              <Label layoutX="4.0" layoutY="199.0" prefHeight="17.0" prefWidth="51.0" text="Adresse">
+                                 <padding>
+                                    <Insets left="3.0" />
+                                 </padding></Label>
+                              <Label layoutX="6.0" layoutY="254.0" prefHeight="17.0" prefWidth="63.0" text="Téléphone" />
+                              <TextField fx:id="clientCin" layoutX="85.0" layoutY="48.0" prefHeight="25.0" prefWidth="177.0" />
+                              <TextField fx:id="clientSName" layoutX="86.0" layoutY="139.0" prefHeight="25.0" prefWidth="175.0" />
+                              <TextField fx:id="ClientAdresse" layoutX="86.0" layoutY="195.0" prefHeight="25.0" prefWidth="175.0" />
+                              <TextField fx:id="ClientTel" layoutX="86.0" layoutY="250.0" prefHeight="25.0" prefWidth="175.0" />
+                              <Button fx:id="btnaddclient" layoutX="154.0" layoutY="496.0" mnemonicParsing="false" onAction="#AddClient" prefHeight="25.0" prefWidth="80.0" style="-fx-background-radius: 20;" text="Ajouter" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btndeletclient" layoutX="181.0" layoutY="349.0" mnemonicParsing="false" onAction="#DeleteCLient" prefHeight="25.0" prefWidth="79.0" style="-fx-background-radius: 20;" text="Delete" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btneditClient" layoutX="88.0" layoutY="349.0" mnemonicParsing="false" onAction="#EditClient" prefHeight="25.0" prefWidth="75.0" style="-fx-background-radius: 20;" text="Edit" textFill="#fffafa">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label id="error" fx:id="errorAddClient" layoutX="39.0" layoutY="532.0" prefHeight="17.0" prefWidth="222.0" stylesheets="@application.css" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="nameSearch" layoutX="9.0" layoutY="14.0" prefHeight="25.0" prefWidth="254.0" promptText="Saisir le Cin..." style="-fx-border-radius: 10px;" />
+                              <ImageView fx:id="search" fitHeight="21.0" fitWidth="13.0" layoutX="239.0" layoutY="20.0" onMouseClicked="#searchClient" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@search.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="10.0" layoutY="450.0" text="Prix a payer :" />
+                              <TextField fx:id="price" layoutX="126.0" layoutY="446.0" prefHeight="25.0" prefWidth="135.0" />
+                              <Label layoutX="9.0" layoutY="399.0" prefHeight="17.0" prefWidth="70.0" text="Abonnement" />
+                              <ChoiceBox fx:id="typeAb" layoutX="86.0" layoutY="395.0" prefHeight="25.0" prefWidth="175.0" />
+                              <Label layoutX="9.0" layoutY="98.0" prefHeight="17.0" prefWidth="41.0" text="Nom" />
+                              <TextField fx:id="clientName" layoutX="86.0" layoutY="94.0" prefHeight="25.0" prefWidth="175.0" />
+                              <Label fx:id="clientIdEdit" layoutX="14.0" layoutY="353.0" prefHeight="17.0" prefWidth="5.0" />
+                              <ChoiceBox fx:id="gender" layoutX="88.0" layoutY="306.0" prefHeight="25.0" prefWidth="171.0" />
+                              <Label layoutX="7.0" layoutY="310.0" text="Sexe" />
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="btnreset" layoutX="80.0" layoutY="510.0" mnemonicParsing="false" onAction="#Resetc" prefHeight="25.0" prefWidth="68.0" style="-fx-background-radius: 20;" text="Reset" textFill="#fffafa">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="6.0" layoutY="15.0" prefHeight="563.0" prefWidth="659.0" style="-fx-border-color: #7B68EE; -fx-border-radius: 8px; -fx-border-width: 1px;">
+                           <children>
+                              <TableView fx:id="tableClient" layoutX="31.0" layoutY="45.0" onMouseClicked="#handleMouseAction" prefHeight="473.0" prefWidth="587.0" stylesheets="@application.css">
+                                <columns>
+                                  <TableColumn fx:id="idclient" maxWidth="40.0" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="cinclientcolonne" maxWidth="80.0" text="CIN" />
+                                  <TableColumn fx:id="nomclientcolonne" prefWidth="99.33334350585938" text="Nom" />
+                                    <TableColumn fx:id="prenomclientcolonne" prefWidth="90.66668701171875" text="Prénom" />
+                                    <TableColumn fx:id="adresseclientcolonne" prefWidth="98.0" text="Adresse" />
+                                    <TableColumn fx:id="telclientcolonne" prefWidth="96.66664632161456" text="Tel" />
+                                    <TableColumn fx:id="sexClient" prefWidth="96.66664632161456" text="Sexe" />
+                                </columns>
+                              </TableView>
+                              
+                           </children>
+                        </AnchorPane>
+                        <Button layoutX="680.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" prefHeight="15.0" prefWidth="21.0" text="&lt;" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
