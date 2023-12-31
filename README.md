@@ -73,4 +73,4 @@ Tests d'intégration pour s'assurer que toutes les fonctionnalités fonctionnent
 
 Si tout a été configuré correctement, démarrez le projet en eclipse en run main avec configurations, vous devriez maintenant avoir accès au login de "GymApp" et vous pouvez commencer à utiliser l'application ( vous pouvez entrer en tant qu'un administrateur ou propriétaire [super admin]). Si vous rencontrez des problèmes lors du processus de configuration, vérifiez à nouveau les étapes et voir photos.rar.
 
-GymApp est faite par Outman OURICH, Ayoub AIT ABIDALLA et Akram ACHIBANE.
+GymApp a été créée par Outman OURICH, Ayoub AIT ABIDALLA et Akram ACHIBANE.
