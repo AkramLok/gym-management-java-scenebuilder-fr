@@ -72,6 +72,6 @@ Tests d'intégration pour s'assurer que toutes les fonctionnalités fonctionnent
    Accédez à phpMyAdmin en entrant "localhost/phpmyadmin/" dans votre navigateur web. Connectez-vous en utilisant le nom d'utilisateur "root" (sans mot de passe). Ensuite, créez une nouvelle base de données nommée "gym_db".
    Une fois la base de données créée, rendez-vous dans l'onglet "Importation" et importez la dernière version du fichier de base de données "gym_db.sql" situé dans le dossier du projet.
 
-Si tout a été configuré correctement, démarrez le projet en eclipse en run main avec configurations, vous devriez maintenant avoir accès au login de "GymApp" et vous pouvez commencer à utiliser l'application ( vous pouvez entrer en tant qu'un administrateur ou propriétaire [super admin]). Si vous rencontrez des problèmes lors du processus de configuration, vérifiez à nouveau les étapes et voir photos.rar.
+Si tout a été configuré correctement, démarrez le projet en eclipse en run main avec configurations, vous devriez maintenant avoir accès au login de "GymApp" et vous pouvez commencer à utiliser l'application ( vous pouvez entrer en tant qu'un administrateur ou propriétaire [super admin]). Si vous rencontrez des problèmes lors du processus de configuration, voir photos.rar et vérifiez à nouveau les étapes.
 
 GymApp a été créée par Outman OURICH, Ayoub AIT ABIDALLA et Akram ACHIBANE.
