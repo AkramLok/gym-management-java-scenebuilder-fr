@@ -1,4 +1,4 @@
-# gym-management-java-javafx-scenebuilder
+# gym-management-java-javafx-scenebuilder-fr
 ## Description:
 GymApp est une application de gestion complète pour les salles de sport. Elle offre une plateforme centralisée pour la gestion des employés, des clients, de la planification des cours, ainsi que des équipements et des salles au sein d'une salle de sport. Accès soit en tant qu'administrateur ou propriétaire. Développée en utilisant les technologies Java, JavaFX, SceneBuilder, WAMP, et MySQL, GymApp propose une solution robuste et conviviale pour les responsables de salles de sport.
 
